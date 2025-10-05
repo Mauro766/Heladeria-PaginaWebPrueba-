@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica M</title>
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_login.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+          <button style="z-index: 1;" id="user1" class="user1" onclick="window.location.href='/login.html'">
+  <img class="user" id="user" src="/img/icon/usuario.png" alt="" />
+</button>
+        <button style="z-index: 1;" id="atras" onclick="animacion_info()" class="atras">
+          <img class="atras1" id="atras1" src="/img/icon/back_318493.png" alt="" />
+        </button>
+    <div class="hijo1_container">
+            <div class="img_helado">
+                <img src="/img/helado_img.png" alt="" />
+            </div>
+            <div class="Btn_logo">
+                <button onclick="animacion_info()"><a>HOME</a></button>
+                <button><a>ICE CREAM</a></button>
+                <button><a>FLAVOR</a></button>
+                <img src="/img/icon_helado.png" alt="" />
+            </div>
+
+          
+       
+       
+
+            <div class="text_header">
+                <h2>Welcome</h2>
+                <h3>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates ipsa magni rerum expedita reiciendis dolore deleniti iure repellendus? Adipisci, illo nihil? Nam pariatur officiis voluptatem quae distinctio rem quaerat consequuntur.
+                </h3>
+                <h1>ICE CREAM</h1>
+                <h2 style="color: rgb(17, 206, 219)">Summer</h2>
+                <div class="redes">
+                    <img src="/img/icon/gorjeo.png" " alt=" "> <img
+            src="/img/icon/linkedin.png " " alt=" ">
+                    <img src="/img/icon/instagram.png" alt=" " />
+                    <img src="/img/icon/facebook.png" " alt=" ">
+          </div>
+        </div>
+
+          
+          
+      </div><div class="login">
+            <div class="helado_img">
+              <img src="/img/helado_img.jpg" alt="">
+            </div>
+            <div class="formulario">
+              <h2>Login</h2>
+             <form  action="">
+              <p>Nombre<input class="texto" type="text"></p>
+              <p>Contraseña<input class="texto" type="text"></p>
+              <a href="">¿Olvidaste la contraseña?</a>
+              <input class="botton" type="button" value="Ingresar">
+             </form>
+          </div>
+    </header>
+  </body>
+ 
+<script>
+  let container = document.querySelector(".hijo1_container");
+  let atras = document.getElementById("atras");
+  let atras1 = document.getElementById("atras1");
+  let user = document.getElementById("user");
+  let user1 = document.getElementById("user1");
+  let animando = false;
+  let animando_iniciar = false;
+
+  function animacion_info() {
+    // Ocultar botón mientras se ejecuta la animación
+    atras.style.display = "flex";
+    atras1.style.display = "flex";
+    user1.style.display = "none";
+
+    if (!animando) {
+      container.style.animation = "seva 0.5s ease-in forwards ";
+      animando = true;
+      atras.style.display = "flex";
+    atras1.style.display = "flex";
+    user1.style.display = "none";
+    } else {
+      container.style.animation = "vuelve 0.5s ease-in forwards ";
+      animando = false;
+      atras.style.display = "none";
+    atras1.style.display = "none";
+    user1.style.display = "flex";
+    }
+  }
+  function iniciar_sesion(){
+    user.style.display = "flex";
+    user1.style.display = "flex";
+
+    if (!animando_iniciar) {
+      container.style.animation = "user_iniciar 0.5s ease-in forwards ";
+      animando_iniciar = true;
+
+    user.style.display = "flex";
+    } else {
+      container.style.animation = "user_iniciar_vuelve 0.5s ease-in forwards ";
+      animando_iniciar = false;
+      user.style.display = "flex";
+      user1.style.display = "flex";
+    }
+    
+  }
+</script>
+</html>

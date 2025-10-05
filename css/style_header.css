@@ -1,0 +1,260 @@
+@font-face {
+    font-family: "Ice";
+    src: url("/fuente/Ice.otf");
+}
+
+@font-face {
+    font-family: "Welcome";
+    src: url("../fuente/PencilStory.otf");
+}
+
+body {
+    margin: 0;
+    user-select: none;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Ice", sans-serif;
+    font-size: 100px;
+    color: rgb(37, 222, 224);
+    margin: 0;
+}
+
+h2 {
+    font-family: "Welcome", sans-serif;
+    font-size: 70px;
+    color: rgb(255, 146, 204);
+    margin: 0;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(255, 146, 204);
+    margin-top: 10px;
+    margin-bottom: 4%;
+}
+
+.hijo1_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    transform: translateX(0px);
+    height: 625px;
+    transition: 0.3s;
+    background-image: linear-gradient(70deg, #2ce0dd 34%, #fff8b2 23%);
+    border-bottom: 20px solid #2ce0dd;
+    animation: vuelve 1s ease-in forwards;
+}
+
+@keyframes seva {
+    0% {
+        width: 100%;
+        transition: 0.3s;
+    }
+    100% {
+        width: 300%;
+        transition: 0.3s;
+    }
+}
+
+@keyframes vuelve {
+    0% {
+        width: 300%;
+        transition: 0.3s;
+    }
+    100% {
+        width: 100%;
+        transition: 0.3s;
+    }
+}
+
+@keyframes user_iniciar {
+    0% {
+        transform: translateX(0px);
+        transition: 0.3s;
+    }
+    100% {
+        transform: translateX(-1400px);
+        transition: 0.3s;
+    }
+}
+@keyframes user_iniciar_vuelve {
+    0% {
+        transform: translateX(-1400px);
+        transition: 0.3s;
+    }
+    100% {
+        transform: translateX(0px);
+        transition: 0.3s;
+    }
+}
+.atras {
+    display: none;
+    position: fixed;
+    top: 34px;
+    background-color: none;
+    right: 23px;
+    width: 5%;
+    height: 10%;
+    background-color: rgba(250, 235, 215, 0);
+    border: none;
+}
+
+
+.atras1 {
+    display: none;
+    position: fixed;
+    top: 34px;
+    background-color: none;
+    right: 23px;
+    width: 5%;
+    height: 10%;
+    rotate: 180deg;
+    filter: invert(1);
+}
+.user1{
+    display: flex;
+    position: fixed;
+    top: 34px;
+    background-color: none;
+    border: 0cap;
+    right: 23px;
+    width: 5%;
+    height: 10%;
+    rotate: 180deg;
+    background-color: rgba(240, 248, 255, 0);
+    background-image: url(/img/icon/usuario.png);
+}
+.user1 .user{
+    align-items: center;
+    filter: drop-shadow(0px 0px 4px rgb(255, 255, 255)) invert();
+}
+
+
+.img_helado {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgb(179, 230, 253);
+    aspect-ratio: 1 / 1;
+}
+
+.img_helado img {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(10px 4px 10px rgba(0, 0, 0, 2));
+    rotate: 25deg;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img_helado img:hover {
+    width: auto;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(10px 4px 10px rgba(0, 0, 0, 2));
+    rotate: 2deg;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Btn_logo {
+    display: flex;
+    position: absolute;
+    background-color: rgba(238, 130, 238, 0);
+    gap: 25px;
+    width: 300px;
+    top: 4%;
+}
+
+.Btn_logo a {
+    font-family: "Ice";
+    text-decoration: none;
+    color: #2ce0dd;
+}
+
+.Btn_logo a:hover {
+    color: rgb(255, 146, 204);
+    background-color: rgba(121, 217, 255, 0);
+    border-radius: 90%;
+}
+
+.Btn_logo button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: "Ice", sans-serif;
+    font-size: 25px;
+    color: rgb(17, 206, 219);
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 65%;
+    height: 65px;
+}
+
+.Btn_logo img {
+    width: 90px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 300px;
+    top: 20px;
+    left: 20px;
+}
+
+.text_header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+}
+
+.redes {
+    top: 77%;
+    right: 24%;
+    gap: 6px;
+}
+
+.redes img {
+    width: 25px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 70px;
+        color:  rgb(255, 146, 204);
+    }
+    h2 {
+        font-size: 80px;
+         color:  rgb(255, 146, 204);
+    }
+    h3 {
+        font-size: 16px;
+         color:  rgb(255, 146, 204);
+    }
+    .img_helado {
+        display: none;
+        width: 60vw;
+        max-width: 300px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .text_header {
+        width: 90%;
+    }
+    .Btn_logo img {
+        display: none;
+        width: 90px;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 300px;
+        top: 20px;
+        left: 20px;
+    }
+}
